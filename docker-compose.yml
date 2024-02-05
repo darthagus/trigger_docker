@@ -14,6 +14,12 @@ services:
     restart: always
     env_file:
       - stack.env
+    labels:
+      - homepage.group=Dockers
+      - homepage.icon=trigger
+      - homepage.href=http://docker01.darthlabs.online:3030
+      - homepage.description=Herramienta de gestión de redes
+      - homepage.name=Trigger
     ports:
       - 3030:3030
     depends_on:
@@ -31,4 +37,4 @@ services:
     networks:
       - app_network
     ports:
-      - 5432:5432
+      - 5433:5432
