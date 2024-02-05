@@ -13,7 +13,7 @@ services:
     container_name: triggerdotdev
     restart: always
     env_file:
-      - .env
+      - ../stack.env
     ports:
       - 3030:3030
     depends_on:
@@ -26,7 +26,8 @@ services:
     restart: always
     volumes:
       - database-data:/var/lib/postgresql/data/
-    env_file: .env
+    env_file: 
+      - ../stack.env
     networks:
       - app_network
     ports:
